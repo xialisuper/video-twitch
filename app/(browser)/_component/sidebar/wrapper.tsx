@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import { cn } from "@/lib/utils";
-import { useSideBarStore } from "@/store/use-sidebar";
+import { useSidebarStore } from "@/store/use-sidebar";
 
 interface WrapperProps {
   children: React.ReactNode;
 }
 
 export default function Wrapper({ children }: WrapperProps) {
-  const { isOpen } = useSideBarStore((state) => state);
+  const { isOpen } = useSidebarStore((state) => state);
   return (
     <aside
       className={cn(

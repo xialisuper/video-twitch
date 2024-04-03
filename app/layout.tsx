@@ -7,6 +7,7 @@ import { ThemeProvider } from "../components/theme-provider";
 import { ModeToggle } from "./mode-toggle";
 import NavBar from "./(browser)/_component/navbar/NavBar";
 import Sidebar from "./(browser)/_component/sidebar/sidebar";
+import Container from "./(browser)/_component/sidebar/container";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,7 @@ export default function RootLayout({
             <NavBar />
             <div className="flex h-full pt-20">
               <Sidebar />
-              <div className="ml-60">{children}</div>
+              <Container>{children}</Container>
             </div>
           </ThemeProvider>
         </body>

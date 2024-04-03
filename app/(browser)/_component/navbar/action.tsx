@@ -8,6 +8,7 @@ import { Clapperboard } from "lucide-react";
 import Link from "next/link";
 
 export default async function Action() {
+  //  todo  fix this cause it's not working
   const user = await currentUser();
 
   if (!user) {
