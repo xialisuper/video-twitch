@@ -5,6 +5,8 @@ import { ClerkProvider } from "@clerk/nextjs";
 import { dark } from "@clerk/themes";
 import { ThemeProvider } from "../components/theme-provider";
 import { ModeToggle } from "./mode-toggle";
+import NavBar from "./(browser)/_component/navbar/NavBar";
+import Sidebar from "./(browser)/_component/sidebar/sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,21 +21,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider appearance={{ baseTheme: dark }}>
-      <html lang="en">
+    <html lang="en">
+      <ClerkProvider appearance={{ baseTheme: dark }}>
         <body className={inter.className}>
           <ThemeProvider
             attribute="class"
             forcedTheme="dark"
             storageKey="gamehub"
-            // enableSystem
-            // disableTransitionOnChange
           >
-            <ModeToggle />
-            {children}
+            {/* <ModeToggle /> */}
+            <NavBar />
+            <div className="flex h-full pt-20">
+              <Sidebar />
+              <div className="ml-60">{children}</div>
+            </div>
           </ThemeProvider>
         </body>
-      </html>
-    </ClerkProvider>
+      </ClerkProvider>
+    </html>
   );
 }

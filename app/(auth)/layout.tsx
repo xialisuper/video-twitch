@@ -1,4 +1,4 @@
-import Logo from "./_components/logo";
+import Logo from "../(browser)/_component/navbar/logo";
 
 export default function AuthLayout({
   children,
