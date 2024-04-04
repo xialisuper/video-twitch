@@ -21,9 +21,9 @@ export default function Toggle() {
       >
         <Button variant="ghost" onClick={isOpen ? close : open}>
           {isOpen ? (
-            <ArrowRightFromLine className="w-4 h-4" />
-          ) : (
             <ArrowLeftFromLineIcon className="w-4 h-4" />
+          ) : (
+            <ArrowRightFromLine className="w-4 h-4" />
           )}
         </Button>
       </Hints>

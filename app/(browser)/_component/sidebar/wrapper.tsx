@@ -14,8 +14,8 @@ export default function Wrapper({ children }: WrapperProps) {
       className={cn(
         "fixed bg-background h-full left-0 border-r border-[#2d2e35] z-50, transition-all duration-150",
         {
-          "w-[60px]": isOpen,
-          "w-[200px]": !isOpen,
+          "w-[60px]": !isOpen,
+          "w-[200px]": isOpen,
         }
       )}
     >
