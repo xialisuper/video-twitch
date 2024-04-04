@@ -1,7 +1,7 @@
 // get recommand user info
 
-import { User } from "@prisma/client";
-// import { User } from "../../node_modules/.prisma/client";
+// import { User } from "@prisma/client";
+import { User } from "../../node_modules/.prisma/client";
 
 import prisma from "@/prisma/db";
 
