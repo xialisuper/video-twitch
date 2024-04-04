@@ -1,7 +1,16 @@
 // get recommand user info
 
 // import { User } from "@prisma/client";
-import { User } from "../../node_modules/.prisma/client";
+
+interface User {
+  id: string;
+  userName: string;
+  imageUrl: string;
+  externalUserId: string;
+  bio: string | null;
+  createdAt: Date;
+  updatedAt: Date;
+}
 
 import prisma from "@/prisma/db";
 
