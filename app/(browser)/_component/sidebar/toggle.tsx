@@ -13,7 +13,6 @@ export default function Toggle() {
   return (
     <div className="flex items-center justify-end">
       <Hints
-        // todo: fix this open & close
         label={isOpen ? "Open" : "Close"}
         side="right"
         align="start"
